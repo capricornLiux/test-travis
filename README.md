@@ -37,7 +37,16 @@
   * 远程要部署的服务器 **~/.ssh** 目录下
   
     * authorized_keys (**公钥, 本地生成的公钥, 拷贝到远程服务器的这个文件下**)
-6. 在项目中创建 **.travis.yml** 文件, 编写travis配置
+6. 加密私钥 
+
+    ```js
+    安装ruby
+    gem install travis
+    travis login
+    travis encrypt-file ~/.ssh/id_rsa --add 会自动在项目中生成.enc的加密文件
+    ```
+
+7. 在项目中创建 **.travis.yml** 文件, 编写travis配置
     ```js
     language: node_js
     node_js:
@@ -66,7 +75,7 @@
 
     * 注意, *encrypted_81a1c7f01cae_key*中的*81a1c7f01cae*需要在travis配置中查找 **More Options => settings** 下面就能看见
 
-7. 创建 **.travis->ssh_config**, 配置travis服务器的ssh config文件, 进行travis和远程部署服务器的ssh连接
+8. 创建 **.travis->ssh_config**, 配置travis服务器的ssh config文件, 进行travis和远程部署服务器的ssh连接
     ```js
     User root
     Host *.*.*.*
@@ -76,7 +85,7 @@
     IdentitiesOnly yes
     ```
 
-8. commit, push项目到远程仓库, 在travis ci中就能看见build的过程了~~😆
+9. commit, push项目到远程仓库, 在travis ci中就能看见build的过程了~~😆
 
 
 
