@@ -4,7 +4,7 @@ node_js:
 branches:
   only:
   - master
-after_script: 
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_90be74a6d39c_key -iv $encrypted_90be74a6d39c_iv
   -in id_rsa.enc -out id_rsa -d
