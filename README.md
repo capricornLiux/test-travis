@@ -25,18 +25,19 @@
   * 本地开发机 **~/.ssh**目录下
 
     * config (ssh配置文件)
-    ```js
-    host "aly"
-    HostName *.*.*.*
-    User ***
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
-    ```
+        ```js
+        host "aly"
+        HostName *.*.*.*
+        User ***
+        Port 22
+        IdentityFile ~/.ssh/id_rsa
+        ```
     * id_rsa (本地私钥)
+
   * 远程要部署的服务器 **~/.ssh** 目录下
   
     * authorized_keys (**公钥, 本地生成的公钥, 拷贝到远程服务器的这个文件下**)
-6. 在项目中创建**.travis.yml** 文件, 编写travis配置
+6. 在项目中创建 **.travis.yml** 文件, 编写travis配置
     ```js
     language: node_js
     node_js:
@@ -64,7 +65,8 @@
     ```
 
     * 注意, *encrypted_81a1c7f01cae_key*中的*81a1c7f01cae*需要在travis配置中查找 **More Options => settings** 下面就能看见
-7. 创建.travis->ssh_config, 配置travis服务器的ssh config文件, 进行travis和远程部署服务器的ssh连接
+    
+7. 创建 **.travis->ssh_config**, 配置travis服务器的ssh config文件, 进行travis和远程部署服务器的ssh连接
     ```js
     User root
     Host 47.104.88.163
