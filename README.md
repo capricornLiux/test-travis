@@ -4,7 +4,7 @@
 2. 登录Travis CI官网, 使用Github账号进行授权登录
 3. 登录之后, 能够看到自己的public的项目, 列表, 点击进行开启Travis CI
 4. clone 项目代码到本地, 编写项目业务代码, 测试脚本等等...
-  ```json
+  ```js
   {
     "name": "test-travis",
     "version": "1.0.0",
@@ -13,7 +13,7 @@
     "scripts": {
         "test": "mocha add.test.js"
     },
-    //...
+    ...
     "devDependencies": {
         "chai": "^4.1.2",
         "mocha": "^5.0.4",
@@ -24,7 +24,7 @@
 5. 配置本地开发机和远程要部署的服务器之间的免密登录(SSH)
   * 本地开发机 **~/.ssh**目录下
     * config (ssh配置文件)
-    ```sh
+    ```js
     host "aly"
     HostName *.*.*.*
     User ***
@@ -35,7 +35,7 @@
   * 远程要部署的服务器 **~/.ssh** 目录下
     * authorized_keys (**公钥, 本地生成的公钥, 拷贝到远程服务器的这个文件下**)
 6. 在项目中创建**.travis.yml** 文件, 编写travis配置
-  ```sh
+    ```js
     language: node_js
     node_js:
     - 6.10.3
@@ -59,10 +59,11 @@
 
     after_script:
     - scp -o StrictHostKeyChecking=no index.js root@47.104.88.163:/root
-```
+    ```
+
     * 注意, *encrypted_81a1c7f01cae_key*中的*81a1c7f01cae*需要在travis配置中查找 **More Options => settings** 下面就能看见
 7. 创建.travis->ssh_config, 配置travis服务器的ssh config文件, 进行travis和远程部署服务器的ssh连接
-  ```sh
+    ```js
     User root
     Host 47.104.88.163
     StrictHostKeyChecking no
@@ -70,6 +71,7 @@
 
     IdentitiesOnly yes
     ```
+    
 8. commit, push项目到远程仓库, 在travis ci中就能看见build的过程了~~😆
 
 
