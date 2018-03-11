@@ -4,9 +4,7 @@
   "description": "test-travis-ci",
   "main": "index.js",
   "scripts": {
-    "test": "npm run unit && npm run interface",
-    "unit": "mocha ./add.test.js",
-    "interface": "mocha ./mochaRunner.js"
+    "test": "mocha mochaRunner.js"
   },
   "repository": {
     "type": "git",
