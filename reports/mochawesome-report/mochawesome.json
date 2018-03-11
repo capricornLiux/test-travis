@@ -1,0 +1,98 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-03-11T11:26:04.873Z",
+    "end": "2018-03-11T11:26:04.925Z",
+    "duration": 52,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "7a7cd2e4-b591-430a-8ce6-2c95f29e9f7c",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "7f5346e2-d59e-4543-b6fa-e32d9e62ce30",
+        "title": "api测试",
+        "fullFile": "/Users/liuxin/Documents/test-travis/test/routeSpec.js",
+        "file": "/test/routeSpec.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "147c7838-8386-460e-84e3-3e458cca273b",
+            "title": "api测试",
+            "fullFile": "/Users/liuxin/Documents/test-travis/test/routeSpec.js",
+            "file": "/test/routeSpec.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "测试/index返回",
+                "fullTitle": "api测试 api测试 测试/index返回",
+                "timedOut": false,
+                "duration": 21,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "request.get('/index')\n    .expect(200)\n    .end(function (err, res) {\n        if (res.body == \"Hello Koa2.0!\") {\n            done();\n        } else {\n            done(err)\n        }\n    });",
+                "err": {},
+                "isRoot": false,
+                "uuid": "df007438-47f7-461b-8147-77a3430b5c40",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "df007438-47f7-461b-8147-77a3430b5c40"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 21,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
