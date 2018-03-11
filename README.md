@@ -65,11 +65,11 @@
     ```
 
     * 注意, *encrypted_81a1c7f01cae_key*中的*81a1c7f01cae*需要在travis配置中查找 **More Options => settings** 下面就能看见
-    
+
 7. 创建 **.travis->ssh_config**, 配置travis服务器的ssh config文件, 进行travis和远程部署服务器的ssh连接
     ```js
     User root
-    Host 47.104.88.163
+    Host *.*.*.*
     StrictHostKeyChecking no
     IdentityFile ~/.ssh/id_rsa
 
