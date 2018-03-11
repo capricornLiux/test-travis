@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- 6.10.3
+branches:
+  only:
+  - master
+after_script: 
+before_install:
+- openssl aes-256-cbc -K $encrypted_90be74a6d39c_key -iv $encrypted_90be74a6d39c_iv
+  -in id_rsa.enc -out id_rsa -d
+
+- mv id_rsa ~/.ssh -f
+
+# 改变文件权限
+- chmod 600 ~/.ssh/id_rsa
+
+# 配置 ssh
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+
+after_script:
+- scp -o StrictHostKeyChecking=no index.js root@47.104.88.163:/root

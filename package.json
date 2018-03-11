@@ -1,0 +1,24 @@
+{
+  "name": "test-travis",
+  "version": "1.0.0",
+  "description": "test-travis-ci",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha add.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capricornLiux/test-travis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/capricornLiux/test-travis/issues"
+  },
+  "homepage": "https://github.com/capricornLiux/test-travis#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4",
+    "webpack": "^3.10.0"
+  }
+}
