@@ -1,6 +1,6 @@
 User root
 Host 47.104.88.163
 StrictHostKeyChecking no
-IdentityFile ~/.ssh/authorized_keys
+IdentityFile ~/.ssh/id_rsa
 
 IdentitiesOnly yes
